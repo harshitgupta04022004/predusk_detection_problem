@@ -1,0 +1,35 @@
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).parent.resolve()
+DATA_ROOT = PROJECT_ROOT / "data"
+WEIGHTS_DIR = PROJECT_ROOT / "weights"
+OUTPUTS_DIR = PROJECT_ROOT / "outputs"
+SAMPLE_DIR = PROJECT_ROOT / "samples"
+
+SPORTSMOT_HF_REPO = "MCG-NJU/SportsMOT"
+
+YOLO_BASE_MODEL = "yolov8m.pt"
+TRAINED_WEIGHTS = WEIGHTS_DIR / "sports_detector" / "weights" / "best.pt"
+
+DATASET_YAML = DATA_ROOT / "sportsmot.yaml"
+
+TRAIN_EPOCHS = 50
+TRAIN_BATCH = 16
+TRAIN_IMGSZ = 640
+TRAIN_WORKERS = 4
+TRAIN_DEVICE = "0"
+TRAIN_PATIENCE = 10
+TRAIN_LR0 = 0.01
+TRAIN_FREEZE = 10
+
+CONF_THRESHOLD = 0.35
+IOU_THRESHOLD = 0.45
+TRACKER_CONFIG = "botsort.yaml"
+TRACK_BUFFER = 60
+
+ANNOTATION_FONT_SCALE = 0.6
+ANNOTATION_THICKNESS = 2
+BOX_PADDING = 4
+
+for _dir in [DATA_ROOT, WEIGHTS_DIR, OUTPUTS_DIR, SAMPLE_DIR]:
+    _dir.mkdir(parents=True, exist_ok=True)

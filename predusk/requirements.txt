@@ -1,0 +1,12 @@
+ultralytics>=8.2.0
+gradio>=4.40.0
+huggingface_hub>=0.23.0
+datasets>=2.20.0
+yt-dlp>=2024.1.0
+opencv-python>=4.9.0
+numpy>=1.24.0
+Pillow>=10.0.0
+tqdm>=4.66.0
+PyYAML>=6.0.1
+torch>=2.0.0
+torchvision>=0.15.0
